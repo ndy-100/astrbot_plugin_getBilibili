@@ -1,0 +1,5 @@
+name: getBilibiliVideo
+desc: 自动解析并下载群内 B 站视频发送到群聊（匿名、模块化）
+author: niniko
+version: 2.0.0
+astrbot_version: ">=4.29.0"

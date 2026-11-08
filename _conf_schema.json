@@ -1,0 +1,77 @@
+{
+    "enabled": {
+        "description": "启用 B 站视频自动下载",
+        "type": "bool",
+        "default": true
+    },
+    "bot_self_trigger": {
+        "description": "bot 自己发出的消息也触发（登入的 QQ 号自己发 B 站链接）",
+        "type": "bool",
+        "default": true,
+        "hint": "关闭后仅响应其他成员 @bot 的消息"
+    },
+    "max_filesize_mb": {
+        "description": "最大文件大小（MB）",
+        "type": "int",
+        "default": 100,
+        "hint": "下载前会按此值限制；合并后允许 10% 余量"
+    },
+    "max_height": {
+        "description": "最大分辨率高度（px）",
+        "type": "int",
+        "default": 720,
+        "hint": "限制画质以降低文件大小和带宽消耗，如 480 / 720 / 1080"
+    },
+    "max_concurrent": {
+        "description": "最大同时下载数",
+        "type": "int",
+        "default": 2,
+        "hint": "同时处理的下载任务上限，防止打满服务器"
+    },
+    "per_user_cooldown": {
+        "description": "每用户冷却时间（秒）",
+        "type": "int",
+        "default": 30,
+        "hint": "同一用户两次触发之间至少间隔的秒数"
+    },
+    "per_user_daily_limit": {
+        "description": "每用户每日下载次数上限",
+        "type": "int",
+        "default": 10,
+        "hint": "0 表示不限制"
+    },
+    "group_whitelist": {
+        "description": "群白名单（群号列表）",
+        "type": "list",
+        "default": [],
+        "hint": "留空表示不限制群；填写后仅在列表中的群生效"
+    },
+    "cleanup_temp_on_start": {
+        "description": "启动时清理遗留的 temp 目录",
+        "type": "bool",
+        "default": true
+    },
+    "use_anonymous_buvid": {
+        "description": "启用匿名 buvid 指纹（无需登录）",
+        "type": "bool",
+        "default": true,
+        "hint": "从 B 站公开接口获取 buvid3/buvid4 指纹，有效降低风控概率"
+    },
+    "cookie_file": {
+        "description": "自定义 Cookies 文件路径（可选）",
+        "type": "string",
+        "default": "",
+        "hint": "留空则使用匿名 buvid 指纹。若填写，则使用该 Netscape 格式 cookies.txt"
+    },
+    "user_agent": {
+        "description": "伪装浏览器 User-Agent",
+        "type": "string",
+        "default": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    },
+    "proxy_url": {
+        "description": "下载代理地址（可选）",
+        "type": "string",
+        "default": "",
+        "hint": "如 http://127.0.0.1:7890，留空则直连。IP 被风控时建议配置代理。"
+    }
+}
