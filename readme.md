@@ -1,4 +1,4 @@
-
+[简体中文](README.zh-CN.md) | [English](README.en.md) | [日本語](README.ja.md)
 # astrbot_plugin_getBilibili
 
 AstrBot 插件：自动解析并下载群内 B 站视频，发送到群聊。
